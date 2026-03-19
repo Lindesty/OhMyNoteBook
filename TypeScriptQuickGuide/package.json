@@ -1,0 +1,36 @@
+{
+  "name": "typescript-quick-guide",
+  "version": "1.0.0",
+  "description": "TypeScript 快速入门教程示例代码",
+  "type": "module",
+  "scripts": {
+    "01": "npx tsx examples/01_setup/index.ts",
+    "02": "npx tsx examples/02_features/index.ts",
+    "03": "npx tsx examples/03_types/index.ts",
+    "04": "npx tsx examples/04_operators/index.ts",
+    "05": "npx tsx examples/05_control_flow/index.ts",
+    "06": "npx tsx examples/06_functions/index.ts",
+    "07": "npx tsx examples/07_destructuring/index.ts",
+    "08": "npx tsx examples/08_strings/index.ts",
+    "09": "npx tsx examples/09_sequences/index.ts",
+    "10": "npx tsx examples/10_null_handling/index.ts",
+    "11": "npx tsx examples/11_json/index.ts",
+    "12": "npx tsx examples/12_type_guards/index.ts",
+    "13": "npx tsx examples/13_generics/index.ts",
+    "14": "npx tsx examples/14_utility_types/index.ts",
+    "15": "npx tsx examples/15_type_compatibility/index.ts",
+    "16": "npx tsx examples/16_oop/index.ts",
+    "17": "npx tsx examples/17_decorators/index.ts",
+    "18": "npx tsx examples/18_async/index.ts",
+    "19": "npx tsx examples/19_modules/index.ts",
+    "20": "npx tsx examples/20_declaration_files/index.ts",
+    "21": "npx tsx examples/21_tsconfig/index.ts",
+    "22": "npx tsx examples/22_error_handling/index.ts",
+    "23": "npx tsx examples/23_datetime/index.ts",
+    "24": "npx tsx examples/24_intl/index.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
+  }
+}

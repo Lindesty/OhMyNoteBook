@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx tsx:*)",
+      "Bash(ls -la C:/Users/lindesty/source/repos/OhMyNoteBook/TypeScriptQuickGuide/*.md)",
+      "Bash(xargs -I {} basename {})",
+      "Bash(mv \"07_字符串操作.md\" \"temp_07.md\")",
+      "Bash(mv \"08_序列.md\" \"temp_08.md\")",
+      "Bash(mv \"09_面向对象.md\" \"temp_09.md\")",
+      "Bash(mv \"10_模块.md\" \"temp_10.md\")",
+      "Bash(mv \"11_异步.md\" \"temp_11.md\")",
+      "Bash(mv \"temp_18.md\" \"07_解构与展开.md\")",
+      "Bash(mv \"temp_07.md\" \"08_字符串操作.md\")",
+      "Bash(mv \"temp_08.md\" \"09_序列.md\")",
+      "Bash(mv \"temp_12.md\" \"10_空值处理.md\")",
+      "Bash(mv \"temp_22.md\" \"11_JSON处理.md\")",
+      "Bash(mv \"07_strings\" \"temp_07\")",
+      "Bash(mv \"08_sequences\" \"temp_08\")",
+      "Bash(mv \"09_oop\" \"temp_09\")",
+      "Bash(mv \"10_modules\" \"temp_10\")",
+      "Bash(mv \"11_async\" \"temp_11\")",
+      "Bash(mv \"temp_18\" \"07_destructuring\")",
+      "Bash(mv \"temp_07\" \"08_strings\")",
+      "Bash(mv \"temp_08\" \"09_sequences\")",
+      "Bash(mv \"temp_12\" \"10_null_handling\")",
+      "Bash(mv \"temp_22\" \"11_json\")",
+      "Bash(ls -1 *.md)",
+      "Bash(ls -d */)",
+      "Bash(ls -la *.md)",
+      "Bash(mkdir -p docs)",
+      "Bash(mkdir -p assets/images)",
+      "Bash(mv 0*.md 1*.md 2*.md docs/)",
+      "Bash(mv src:*)",
+      "Bash(rm -rf images)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

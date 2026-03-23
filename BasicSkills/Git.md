@@ -43,4 +43,41 @@ git remote remove <远程仓库别名>
 ```
 
 
+### 使用分支
+
+查看本地与远程的分支
+
+```bash 
+git branch -a
+```
+
+创建并切换分支
+
+```bash
+git switch -c feature/login-page
+```
+
+将主分支的内容同步到子分支中
+
+```bash
+# 确保在主分支是最新的
+git checkout main
+git pull origin main
+# 切回你的功能分支
+git checkout feature/login-page
+# 将 main 的更新合并进来
+git merge main
+# 或使用 rebase（保持线性历史，适合个人分支）：
+# git rebase main
+```
+
+
+
+
+
+
+
+
+
+
 # Git子模块与子树

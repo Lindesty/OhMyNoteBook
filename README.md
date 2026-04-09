@@ -7,8 +7,9 @@
 
 ### 基础技能
 
+[Git](./BasicSkills/Git.md)
 
-
+[Ubuntu](./BasicSkills/Ubuntu运维.md)
 
 ### TypeScript 快速指南
 

@@ -4,8 +4,6 @@
 - 官方发版地址：[Release v3.0.0 One Piece · vuejs/core](https://github.com/vuejs/core/releases/tag/v3.0.0)
 - 截止2025年4月，最新的公开版本为：`3.5.x`（Vue 3.4、3.5 引入了多项重要新特性）
 
-  <img src="images/1695089947298-161c1b47-eb86-42fb-b1f8-d6a4fcab8ee2.png" alt="image.png" style="zoom:30%;" /> 
-
 ## 1.1. 【性能的提升】
 
 - 打包大小减少`41%`。
@@ -143,10 +141,6 @@ npm create vue@latest
 安装官方推荐的`vscode`插件：
 
 > 注意：VS Code 的 Vue 插件现已更名为 **"Vue - Official"**（原名 Volar），请安装最新版本。
-
-<img src="images/volar.png" alt="Vue - Official插件" style="zoom:50%;" />
-
-<img src="images/image-20231218085906380.png" alt="image-20231218085906380" style="zoom:42%;" /> 
 
 总结：
 

@@ -116,3 +116,83 @@ systemctl enable containerd
 *   **containerd.io**: 一个工业标准的容器运行时，负责容器的生命周期管理。
 *   **docker-buildx-plugin**: 一个用于构建 Docker 镜像的增强型 CLI 插件，支持多平台构建等高级功能。
 *   **docker-compose-plugin**: Docker Compose V2，作为一个 CLI 插件安装，用于定义和运行多容器应用。其命令格式为 `docker compose`，注意中间没有横线。
+
+
+
+# Debian 配置静态ip设置DNS
+
+打开配置文件
+
+```bash
+vi /etc/network/interfaces
+```
+
+参考如下设置配置
+
+```bash
+# 以 enp0s3 为例，请替换成你自己的网卡名
+auto enp0s3
+iface enp0s3 inet static
+    address 192.168.1.100   # 你的静态 IP
+    netmask 255.255.255.0   # 子网掩码
+    gateway 192.168.1.1     # 网关
+```
+
+配置dns
+
+打开dns配置文件
+
+```bash
+vi /etc/resolv.conf
+```
+
+添加一行nameserver配置
+
+```bash
+nameserver 8.8.8.8
+```
+
+# 配置ssh允许root远程登录
+
+打开配置文件
+
+```bash
+vim /etc/ssh/sshd_config
+```
+
+按下'?',键入'PermitRootLogin',按下'Enter',使用'n'查找下一个结果,将其改为yes
+
+```bash
+PermitRootLogin yes
+```
+
+# 在本地生成密钥并上传到服务器
+
+## 1. 在本地生成密钥 
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+## 2. 将公钥上传到服务器
+
+使用命令复制
+
+```bash
+ssh-copy-id username@server_ip
+```
+
+或使用手动复制
+
+```bash
+# 查看公钥内容
+cat ~/.ssh/id_ed25519.pub
+
+# 复制输出内容，然后登录服务器执行：
+mkdir -p ~/.ssh
+echo "粘贴的公钥内容" >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
+
+

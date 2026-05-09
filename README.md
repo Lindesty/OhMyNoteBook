@@ -50,3 +50,6 @@
 - [在Cline中使用ChromeDevtoolsMCP](./工具配置/在Cline中使用ChromeDevtoolsMCP.md)
 - [在Cline中使用BurpMCP](./工具配置/在Cline中配置BurpMcp并配合浏览器.md)
 
+### 软件测试
+
+- [移动端软件测试](./SoftwareTesting/MobileTestNotes.md)

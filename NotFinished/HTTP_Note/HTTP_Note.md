@@ -238,7 +238,7 @@ list：列出已经启动的 OpenResty 服务器进程。
 
 全部过程
 
-![从IP访问网页](./img/IP2Website.avif)
+![从IP访问网页](./img/IP2Website.webp)
 
 1. TCP三次握手建立连接
 
@@ -246,13 +246,13 @@ HTTP 协议运行在 TCP/IP 基础上，浏览器用 HTTP 协议收发数据，�
 
 按下回车后浏览器判断是不是ip地址，不是就进行域名解析，依次通过浏览器缓存，系统缓存，host文件，由于我们在地址栏里直接输入了 IP ，而 Web 服务器的默认端口是 80，所以浏览器就要依照 TCP 协议的规范，使用“三次握手”建立与 Web 服务器的连接。
 
-![三次握手建立连接](./img/TCP_Start.avif)
+![三次握手建立连接](./img/TCP_Start.webp)
 
 对应到 Wireshark 里，就是最开始的三个抓包，浏览器使用的端口是 51265，服务器使用的端口是 80，经过 SYN、SYN/ACK、ACK 的三个包之后，浏览器与服务器的 TCP 连接就建立起来了。
 
 2. HTTP传输HTML页面
 
-![请求网站的页面](./img/HTTP_Get_Page.avif)
+![请求网站的页面](./img/HTTP_Get_Page.webp)
 
 有了可靠的 TCP 连接通道后，HTTP 协议就可以开始工作了。于是，浏览器按照 HTTP 协议规定的格式，通过 TCP 发送了一个“GET / HTTP/1.1”请求报文
 
@@ -268,7 +268,7 @@ Web 服务器在收到报文后在内部就要处理这个请求。依据 HTTP �
 
 3. HTTP传输图标文件
 
-![请求网站的图标](./img/HTTP_Get_Ico.avif)
+![请求网站的图标](./img/HTTP_Get_Ico.webp)
 
 这之后还有两个来回，共四个包，重复了相同的步骤。这是浏览器自动请求了作为网站图标的“favicon.ico”文件，与我们输入的网址无关。但因为我们的实验环境没有这个文件，所以服务器在硬盘上找不到，返回了一个“404 Not Found”
 
@@ -276,7 +276,7 @@ Web 服务器在收到报文后在内部就要处理这个请求。依据 HTTP �
 
 4. TCP四次挥手关闭连接
 
-![结束与网站的连接](./img/TCP_End.avif)
+![结束与网站的连接](./img/TCP_End.webp)
 
 因为 HTTP/1.1 长连接特性，默认不会立即关闭连接，需要等待很久
 
@@ -286,7 +286,7 @@ HTTP 的工作模式是非常简单的，由于 TCP/IP 协议负责底层的具�
 
 - TCP报文结构
 
-![TCP报文](./img/TCP_Message.avif)
+![TCP报文](./img/TCP_Message.webp)
 
 - HTTP的报文结构
 
@@ -300,13 +300,13 @@ HTTP协议请求报文和响应报文结构基本相同，由三大部分组成�
 
 从Wireshark所抓取的包可以看到
 
-![浏览器向网页发送请求](./img/HTTP_Message_Request.avif)
+![浏览器向网页发送请求](./img/HTTP_Message_Request.webp)
 
 其中第一行的"GET / HTTP/1.1"就是请求行，后面"Host","Connection"...等都属于header，报文的最后是一个空白行结束，没有body
 
 ## 请求行
 
-![](./img/HTTP_Struct.avif)
+![](./img/HTTP_Struct.webp)
 
 报文中的请求行简要地描述了客户端想要如何操作服务器端的资源，由三部分构成：
 
@@ -316,7 +316,7 @@ HTTP协议请求报文和响应报文结构基本相同，由三大部分组成�
 
 这三个部分通常使用空格来分隔最后用CRLF换行表示结束
 
-![HTTP请求行](./img/HTTP_Request_StartLine.avif)
+![HTTP请求行](./img/HTTP_Request_StartLine.webp)
 
 在这个请求行中，“GET”是请求方法，“/”是请求目标，“HTTP/1.1”是版本号，意思是“服务器你好，我想获取网站根目录下的默认文件，我用的协议版本号是 1.1，
 请不要用 1.0 或者 2.0 回复我。”
@@ -410,7 +410,7 @@ TRACE方法多用于对 HTTP 链路的测试或诊断，可以显示出请求 - 
 
 URI 本质上是一个字符串，这个字符串的作用是唯一地标记资源的位置或者名字。
 
-![](./img/URI_Simple_Struct.avif)
+![](./img/URI_Simple_Struct.webp)
 
 - URI 第一个组成部分叫scheme，翻译成中文叫“方案名”或者“协议名”，表示资源应该使用哪种协议来访问。
 >最常见的当然就是“http”了，表示使用 HTTP 协议。另外还有“https”，表示使用经过加密、安全的 HTTPS 协议。此外还有其他不是很常见的 scheme，例如 ftp、ldap、file、news 等。
@@ -452,7 +452,7 @@ URI 本质上是一个字符串，这个字符串的作用是唯一地标记资�
 
 - URI 的完整格式(已被弃用)
 
-![](./img/URI_Full_Struct.avif)
+![](./img/URI_Full_Struct.webp)
 
 第一个多出的部分是协议名之后、主机名之前的身份信息“user:passwd@”，表示登录主机时的用户名和密码，但现在已经不推荐使用这种形式了（RFC7230），因为它把敏感信息以明文形式暴露出来，存在严重的安全隐患。
 
@@ -478,15 +478,15 @@ URI 转义的规则非常“简单粗暴”，直接把非 ASCII 码或特殊字
 2. 状态码：一个三位数，用代码的形式表示处理的结果，比如200是碾，500是服务器错误
 3. 原因：作为数字状态码补充，是更详细的解释文字，帮助人理解原因
 
-![HTTP响应的状态行](./img/HTTP_Response_StartLine.avif)
+![HTTP响应的状态行](./img/HTTP_Response_StartLine.webp)
 
 从Wireshark中抓取到的响应报文中：
 
-![](./img/HTTP_Message_Response.avif)
+![](./img/HTTP_Message_Response.webp)
 
 HTTP/1.1 表示这个报文使用的协议版本号是1.1，状态码是200，表示操作被成功接收并处理
 
-![](./img/HTTP_Message_Response_Code_404.avif)
+![](./img/HTTP_Message_Response_Code_404.webp)
 
 状态码是404，表示请求收到了，但是常有找到需要的资源
 
@@ -582,8 +582,8 @@ RFC 标准把状态码分成了五类，用数字的第一位表示分类，而 
 
 ## 头部字段
 
-![](./img/HTTP_Message_Request_Full.avif)
-![](./img/HTTP_Message_Response_Full.avif)
+![](./img/HTTP_Message_Request_Full.webp)
+![](./img/HTTP_Message_Response_Full.webp)
 
 请求头和响应头header是基本一样的
 
@@ -750,7 +750,7 @@ Vary: Accept-Encoding,User-Agent,Accept
 3. 数据块紧跟在长度头后，最后也用 CRLF 结尾，但数据不包含 CRLF；
 4. 最后用一个长度为 0 的块表示结束，即“0\r\n\r\n”。
 
-![](./img/chunked_transfer.avif)
+![](./img/chunked_transfer.webp)
 
 ## 范围请求
 
@@ -785,7 +785,7 @@ Vary: Accept-Encoding,User-Agent,Accept
 
 多段数据的格式与分块传输也比较类似，但它需要用分隔标记 boundary 来区分不同的片段，可以通过图来对比一下。
 
-![](./img/multipart_transfer.avif)
+![](./img/multipart_transfer.webp)
 
 每一个分段必须以“- -boundary”开始（前面加两个“-”），之后要用“Content-Type”和“Content-Range”标记这段数据的类型和所在范围，然后就像普通的响应头一样以回车换行结束，再加上分段数据，最后用一个“- -boundary- -”（前后各有两个“-”）表示所有的分段结束。
 
@@ -833,7 +833,7 @@ HTTP 协议最初（0.9/1.0）是个非常简单的协议，通信过程也采�
 
 而 HTTP 的一次简单“请求 - 响应”通常只需要 4 个包，如果不算服务器内部的处理时间，最多是 2 个 RTT。这么算下来，浪费的时间就是“3÷5=60%”，有三分之二的时间被浪费掉了，传输效率低得惊人。
 
-![](./img/short-lived_connection.avif)
+![](./img/short-lived_connection.webp)
 
 ## 长连接
 
@@ -843,7 +843,7 @@ HTTP 协议最初（0.9/1.0）是个非常简单的协议，通信过程也采�
 
 这样虽然不能改善 TCP 的连接效率，但基于“分母效应”，每个“请求 - 应答”的无效时间就会降低不少，整体传输效率也就提高了。
 
-![](./img/short-lived_PK_keep-lived.avif)
+![](./img/short-lived_PK_keep-lived.webp)
 
 在短连接里发送了三次 HTTP“请求 - 应答”，每次都会浪费 60% 的 RTT 时间。而在长连接的情况下，同样发送三次请求，因为只在第一次时建立连接，在最后一次时关闭连接，所以浪费率就是“3÷9≈33%”，降低了差不多一半的时间损耗。显然，如果在这个长连接上发送的请求越多，分母就越大，利用率也就越高。
 
@@ -879,7 +879,7 @@ TCP 连接长时间不关闭，服务器必须在内存里保存它的状态，�
 
 如果队首的请求因为处理的太慢耽误了时间，那么队列里后面的所有请求也不得不跟着一起等待，结果就是其他的请求承担了不应有的时间成本。
 
-![](./img/Head-of-line_blocking.avif)
+![](./img/Head-of-line_blocking.webp)
 
 - “并发连接”（concurrent connections）
 
@@ -901,13 +901,13 @@ TCP 连接长时间不关闭，服务器必须在内存里保存它的状态，�
 
 先在实验环境里看一下重定向的过程吧，用 Chrome 访问 URI “/18-1”，它会使用 302 立即跳转到“/index.html”。
 
-![](./img/redirection_example_1.avif)
+![](./img/redirection_example_1.webp)
 
 从这个实验可以看到，这一次“重定向”实际上发送了两次 HTTP 请求，第一个请求返回了 302，然后第二个请求就被重定向到了“/index.html”。但如果不用开发者工具的话，你是完全看不到这个跳转过程的，也就是说，重定向是“用户无感知”的。
 
 第一个请求返回的响应报文：
 
-![](./img/redirection_example_2.avif)
+![](./img/redirection_example_2.webp)
 
 这里出现了一个新的头字段“Location: /index.html”，它就是 301/302 重定向跳转的秘密所在。
 
@@ -1000,7 +1000,7 @@ Cookie 这张小纸条是怎么传递需要用到两个字段：响应头字段S
 
 不过因为服务器的“记忆能力”实在是太差，一张小纸条经常不够用。所以，服务器有时会在响应头里添加多个 Set-Cookie，存储多个“key=value”。但浏览器这边发送时不需要用多个 Cookie 字段，只要在一行里用“;”隔开就行。
 
-![](./img/cookie_working_process.avif)
+![](./img/cookie_working_process.webp)
 
 从这张图中我们也能够看到，Cookie 是由**浏览器负责存储的**，而不是操作系统。所以，它是“浏览器绑定”的，只能在本浏览器内生效。
 
@@ -1010,11 +1010,11 @@ Cookie 这张小纸条是怎么传递需要用到两个字段：响应头字段S
 
 首次访问时服务器会设置两个 Cookie。
 
-![](./img/cookie_working_example_1.avif)
+![](./img/cookie_working_example_1.webp)
 
 然后刷新这个页面，浏览器就会在请求头里自动送出 Cookie，服务器就能认出你了。
 
-![](./img/cookie_working_example_2.avif)
+![](./img/cookie_working_example_2.webp)
 
 如果换成 Firefox 等其他浏览器，因为 Cookie 是存在 Chrome 里的，所以服务器就又“蒙圈”了，不知道你是谁，就会给 Firefox 再贴上小纸条。
 
@@ -1024,7 +1024,7 @@ Cookie 就是服务器委托浏览器存储在客户端里的一些数据，而�
 
 下面这个截图是实验环境“/19-2”的响应头，我来对着这个实际案例讲一下都有哪些常见的 Cookie 属性。
 
-![](./img/cookie_property_example_1.avif)
+![](./img/cookie_property_example_1.webp)
 
 首先，我们应该设置 Cookie 的生存周期，也就是它的有效期，让它只能在一段时间内可用，就像是食品的“保鲜期”，一旦超过这个期限浏览器就认为是 Cookie 失效，在存储里删除，也不会发送给服务器。
 
@@ -1054,8 +1054,8 @@ Expires 和 Max-Age 可以同时出现，两者的失效时间可以一致，也
 
 Chrome 开发者工具是查看 Cookie 的有力工具，在“Network-Cookies”里可以看到单个页面 Cookie 的各种属性，另一个“Application”面板里则能够方便地看到全站的所有 Cookie。
 
-![](./img/cookie_property_example_2.avif)
-![](./img/cookie_property_example_3.avif)
+![](./img/cookie_property_example_2.webp)
+![](./img/cookie_property_example_3.webp)
 
 ## Cookie 的应用
 现在回到我们最开始的话题，有了 Cookie，服务器就有了“记忆能力”，能够保存“状态”，那么应该如何使用 Cookie 呢？

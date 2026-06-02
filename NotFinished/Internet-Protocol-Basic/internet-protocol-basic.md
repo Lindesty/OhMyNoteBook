@@ -146,7 +146,7 @@ VLSM 可变长子网掩码
 
 不可访问互联网
 
-![](./img/VMware_network.avif)
+![](./img/VMware_network.webp)
 
 # 互联网发展史
     内容：
@@ -160,7 +160,7 @@ VLSM 可变长子网掩码
 
 ### 1. 只用网线连接两台电脑
 
-![网线连接两台电脑](./img/connect_computer_with_network_cable.avif)
+![网线连接两台电脑](./img/connect_computer_with_network_cable.webp)
 
 ①「网线+网卡+协议栈」三要素，是组成“最小单元网络”的基础，缺一不可。
 
@@ -172,21 +172,21 @@ VLSM 可变长子网掩码
 
 ### 2. 中继器
 
-![终端之间的距离太远，导致数据开始丢失](./img/data_corruption_caused_by_distance_far.avif)
+![终端之间的距离太远，导致数据开始丢失](./img/data_corruption_caused_by_distance_far.webp)
 
 终端之间如果距离太远，一旦超过网线物理传输距离上限，则数据开始丢失。
 
-![中继器连接两台设备](./img/connect_computer_with_repeater.avif)
+![中继器连接两台设备](./img/connect_computer_with_repeater.webp)
 
 中继器（Repeater）是一种物理层产品，能够对信息进行**中继**和**放大**，实现设备远距离传输
 
 ### 3. 集线器
 
-![](./img/lake_of_port.avif)
+![](./img/lake_of_port.webp)
 
 中继器一般只有两个接口，意味着如果网络中超过三个终端主机的话，则无法实现多主机直接的数据通信。
 
-![](./img/connect_computer_with_hub.avif)
+![](./img/connect_computer_with_hub.webp)
 
 ①集线器（Hub）是一种 “多口中继器”，也是属于物理层产品，能够对信息进行中继和放大，从任意接口收到的数据，会往其他所有接口泛洪。
 
@@ -197,7 +197,7 @@ VLSM 可变长子网掩码
 
 解决数据广播问题
 
-![](./img/connect_computer_with_bridge.avif)
+![](./img/connect_computer_with_bridge.webp)
 
 ①网桥（Bridge）是一种链路层产品，能够记录终端主机的MAC地址并生成MAC表（也称为CAM表），MAC表相当于“地图”，网桥根据MAC表转发主机之间的数据流。
 
@@ -209,7 +209,7 @@ VLSM 可变长子网掩码
 
 解决速度问题
 
-![](./img/connect_computer_with_switch.avif)
+![](./img/connect_computer_with_switch.webp)
 
 ①交换机（Switch）是一种链路层产品，能够记录终端主机的MAC地址并生成MAC表（也称为CAM表），MAC表相当于“地图”，交换机根据MAC表转发主机之间的数据流。
 
@@ -224,9 +224,9 @@ VLSM 可变长子网掩码
 
 解决距离问题
 
-![](./img/connect_computer_with_router_0.avif)
+![](./img/connect_computer_with_router_0.webp)
 
-![](./img/connect_computer_with_router_1.avif)
+![](./img/connect_computer_with_router_1.webp)
 
 ①路由器（Router）是一种网络层产品，基于IP寻址，采用路由表实现数据转发。
 
@@ -243,7 +243,7 @@ VLSM 可变长子网掩码
 
 ### 7. 无线AC/AP
 
-![](./img/connect_computer_with_AC_AP.avif)
+![](./img/connect_computer_with_AC_AP.webp)
 
 
 ①无线AP（Access point）可以看成带有无线功能的交换机/路由器，随着无线城市、移动办公趋势，网络中无线产品的比例越来越多。
@@ -254,7 +254,7 @@ VLSM 可变长子网掩码
 
 解决安全问题
 
-![](./img/use_firwall_connect_internet.avif)
+![](./img/use_firwall_connect_internet.webp)
 
 ①防火墙（Firewall）是一种网络安全产品，用于对网络进行安全访问限制，一般用在互联网边缘，防止外部黑客攻击。
 
@@ -268,7 +268,7 @@ VLSM 可变长子网掩码
 
 ### 9. QOS(Quality of service)流量质量保证
 
-![](./img/use_qos.avif)
+![](./img/use_qos.webp)
 
 ①网络中的流控（流量控制）产品主要分为上网行为管理、负载均衡器/应用交付、链路优化等。
 
@@ -280,7 +280,7 @@ VLSM 可变长子网掩码
 
 ### 1. 家庭Soho网络
 
-![](./img/home_network.avif)
+![](./img/home_network.webp)
 
 ①说明：小型企业网络，采用两层架构，单核心拓扑
 
@@ -290,7 +290,7 @@ VLSM 可变长子网掩码
 
 ### 2. 小型创业公司网络
 
-![](./img/start-up_company_network.avif)
+![](./img/start-up_company_network.webp)
 
 ①说明：小型企业网络，采用两层架构，单核心拓扑
 
@@ -300,7 +300,7 @@ VLSM 可变长子网掩码
 
 ### 3. 园区网
 
-![](./img/compus_network.avif)
+![](./img/compus_network.webp)
 
 ①说明：大中型企业网/校园网等最常见的园区网络架构，采用接入汇聚核心三层架构，双核心网络。根据网络需求，分为用户区、对内服务区、对外服务区、管理区、互联网区等，通过核心交换机和防火墙进行连接和隔离。互联网采用多出口连接，通过路由器进行拨号和NAT，通过流控产品进行负载均衡/上网行为管理，通过防火墙进行安全隔离。
 
@@ -311,7 +311,7 @@ VLSM 可变长子网掩码
 
 ### 4. 政务网
 
-![](./img/government_network.avif)
+![](./img/government_network.webp)
 
 ①说明：政府网包括政府、电力、公安等，都采用类似的城域网架构，全网通过MPLS技术来设计，将不同的地市接入CE通过汇聚PE进行连接，并划分到不同的VRF中，核心设备作为P/PE进行高速转发。不同地市之间通过VRF隔离访问，当需要访问互联网、政务外网、服务器等，通过RD/RT的设计来实现适度互访。
 
@@ -321,7 +321,7 @@ VLSM 可变长子网掩码
 
 ### 5. 数据中心
 
-![](./img/data_center_network.avif)
+![](./img/data_center_network.webp)
 
 ①说明：典型的大二层数据中心网络/IDC设计，主要分为租户区（服务集群）、互联网区、安全管理区。其中租户区采用设备虚拟化和链路虚拟化技术，将设备处理能力和链路承载能力提高，并且在服务器区域放置负载均衡器，将流量合理有效分配到固定的服务器上。互联网出口区采用路由器执行BGP和地址翻转，采用IPS/防DDOS设备放置大流量泛洪攻击，采用流控执行出口负载、采用防火墙进行安全隔离。安全管理区通过防火墙进行安全接入，通过审计、日志、入侵检测、网管等产品进行全网安全管理。
 
@@ -332,7 +332,7 @@ VLSM 可变长子网掩码
 
 ### 6. 电信网/互联网
 
-![](./img/the_whole_internet_network.avif)
+![](./img/the_whole_internet_network.webp)
 
 ①说明：电信网/互联网主要采用城域网技术架构来实现，主要用于承载全国/全球的客户流量，是互联网中最核心承载网络。不同运营商之间采用多个AS自治系统隔离和相连，通过BGP协议交互路由，采用MPLS实现标签交换。
 
@@ -358,7 +358,7 @@ VLSM 可变长子网掩码
 
 ### OSI模型
 
-![](./img/osi_model.avif)
+![](./img/osi_model.webp)
 
 ### 数据封装与解封装（发送接收过程）
 
@@ -372,7 +372,7 @@ VLSM 可变长子网掩码
 
 ### OSI数据封封装和解封装
 
-![](./img/data_encapsulation.avif)
+![](./img/data_encapsulation.webp)
 
 ## Enthernet协议
 
@@ -405,7 +405,7 @@ Internet Protocol， 互联网协议，用于实现数据的不可靠面向无�
 
 2. IP协议字段解读
 
-![](./img/IP_Field_Example.avif)
+![](./img/IP_Field_Example.webp)
 
 - Version（版本号）：标识IP协议的版本，目前V4版本地址已经枯竭，V6慢慢成为主流。
 - Header Length（头部长度）：默认为20字节，最大为60字节。
@@ -429,7 +429,7 @@ IP状况标准是20字节，最大60字节
 
 DSCP（Differentiated Services Field） 即服务区分符，用于为不同的IP数据包定义不同的服务质量。DSCP的前身叫做TOS（Type of Service，服务类型）。不管是TOS还是DSCP，它们都是QoS服务质量里面的技术实现。
 
-![](./img/DSCP_Qos.avif)
+![](./img/DSCP_Qos.webp)
 
 应用场景：在企业网中，网络运维人员可以为核心数据流采用高优先级的DSCP值，为其他普通的例如BT下载流量采用最普通的优先级。在运营商网络里，可以根据客户购买的不同专线服务，采用不同的DSCP值。
 
@@ -440,12 +440,12 @@ DSCP（Differentiated Services Field） 即服务区分符，用于为不同的I
 IP数据包每经过一“跳”（ICMP包转发次数），TTL减去一
 当路由器收到一个TTL=0时的数据包时，则宣告此数据包死亡并丢弃
 TTL本质是为了IP数据包的“环路”问题。
-![](./img/TTL.avif)
-![](./img/routing_loop.avif)
+![](./img/TTL.webp)
+![](./img/routing_loop.webp)
 
 (4)协议号
 类型值、协议号、端口号都是用于标志上层协议，方便接收方式实现数据的解封装。此功能称为协议之间的“分用”。
-![](./img/Portocol_usage.avif)
+![](./img/Portocol_usage.webp)
 
 (5)头部校验和
 
@@ -455,7 +455,7 @@ TTL本质是为了IP数据包的“环路”问题。
 
 MTU（最大传输单元）以太网数据包限制最大1500bytes
 
-![](./img/Identification_Flag_FargmentOffset.avif)
+![](./img/Identification_Flag_FargmentOffset.webp)
 
 ### IP地址
 
@@ -513,7 +513,7 @@ MTU（最大传输单元）以太网数据包限制最大1500bytes
 |有效IP地址数|一个网络/网段去掉“头”和“尾”|
 |网络地址|网段的形状，用来代表一个网段|
 |广播地址|用来代表整个网段所有主机|
-![](./img/available_IP_address.avif)
+![](./img/available_IP_address.webp)
 
 #### IP子网分类
 
@@ -589,13 +589,13 @@ MAC的封装。
 
 同一个局域网里面，当PC1需要跟PC2进行通信时，根据OSI数据封装顺序，发送方会自顶向下（从应用层到物理层）封装数据，然后发送出去
 这里以PC1 ping PC2的过程举例==>
-![](./img/arp_pirnciple_1.avif)
+![](./img/arp_pirnciple_1.webp)
 
 PC1封装数据并且对外发送数据时，上图中出现了"failed"，即数据封装失败了，
 我们给PC1指令-"ping ip2"，这就告知了目的IP，此时PC1便有了通信需要的源目IP地址，但是PC1仍然没有通信需要的目的MAC地址。
 
-![](./img/arp_pirnciple_2.avif)
-![](./img/arp_pirnciple_3.avif)
+![](./img/arp_pirnciple_2.webp)
+![](./img/arp_pirnciple_3.webp)
 
 此时pc1会进行广播来查询pc2的mac地址，发送的包中mac填的是0，在pc2收到广播后，会向pc1进行单播来发送自己的mac地址，pc1会将pc2的mac信息放入本地的『ARP缓存表』，接下来pc1再次进行数据封装，正式进入PING通信 
 通过命令行"arp -a"查看『ARP缓存表』，"arp -d"来删除缓存表
@@ -617,11 +617,11 @@ Echo reply 回显应答
 3. Tracert/Traceroute：探测本地到目的路径，拓扑踩点
 
 - windows tracert原理
-![](./img/tracert_1.avif)
+![](./img/tracert_1.webp)
 
 - liunx/unix traceroute原理
 
-![](./img/tracert_2.avif)
+![](./img/tracert_2.webp)
 
 
 
@@ -661,13 +661,13 @@ Echo reply 回显应答
 动态主机配置协议，Dynamic Host Configuration Protocol，用于初到地终端设备的动态IP信息分配（IP地址、网关地址、DNS服务器、WINS服务…）
 
 旧名字 bootparams
-![](./img/DHCP_unix_process.avif)
+![](./img/DHCP_unix_process.webp)
 
 unix/liunx
-![](./img/DHCP_unix.avif)
+![](./img/DHCP_unix.webp)
 
 windows
-![](./img/DHCP_windows.avif)
+![](./img/DHCP_windows.webp)
 
 - 数据包的功能？
 
@@ -740,11 +740,11 @@ Transmission Control Protocol
 
 4. 多路复用
 
-![](./img/tcp_multiplex.avif)
+![](./img/tcp_multiplex.webp)
 
 TCP通过端口号(port) 或 套节字(ip + port)实现多路复用
 
-![](./img/network_quintuple.avif)
+![](./img/network_quintuple.webp)
 
 源目IP + 源目Port + 协议号 = 五元组
 
@@ -769,19 +769,19 @@ TCP通过端口号(port) 或 套节字(ip + port)实现多路复用
 
 ### ARP攻击原理
 
-![](./img/arp_attack_1.avif)
+![](./img/arp_attack_1.webp)
 正常情况下，若收到的ARP请求不是给自己的，则直接丢弃；而这里PC3（Hacker）在监听之后，发起了ARP回应包：我就是PC2（IP2-MAC3）。从拓扑可以出现，PC3明明是IP3对应MAC3，很显然这就是一个ARP欺骗行为。
-![](./img/arp_attack_2.avif)
+![](./img/arp_attack_2.webp)
 
 ARP和CAM表，就是遵循"后到优先"原则,稳健的ARP嗅探/渗透工具，能在短时间内高并发做网络扫描（例如1秒钟成千上百的数据包），能够持续对外发送欺骗包。
-![](./img/arp_attack_3.avif)
+![](./img/arp_attack_3.webp)
 
 根据数据封装规则，当PC1要跟PC2进行通信时，无论是发生PING包还是发送其他数据，
 首先要查找ARP表，然后在网络层打上源目IP，在链路层打上源目MAC，然后将数据包发送给交换机。交换机收到之后对数据进行解封装，并且查看CAM表（基于目的MAC转发），由于目标MAC3对应Port3，所以交换机自然而然将其转发给PC3。
 
 就这样，PC1本来要发给PC2的数据包，落到了PC3（Hacker）手里，这就完成了一次完整的ARP攻击。反过来，如果PC2要将数据包发送给PC1，PC3仍然可以以同样的ARP欺骗实现攻击，这就有了下面这张图（PC3既欺骗了PC1，也欺骗了PC2）。
 
-![](./img/arp_attack_4.avif)
+![](./img/arp_attack_4.webp)
 
 
 
@@ -906,7 +906,7 @@ ARP和CAM表，就是遵循"后到优先"原则,稳健的ARP嗅探/渗透工具�
 后面数值为接口序号
 1/2表示第1个模块的第2个接口
 
-![](./img/interface%20moodle.avif)
+![](./img/interface%20moodle.webp)
 
 
 
@@ -999,7 +999,7 @@ telnet 12.1.1.2
 
 (1) 密码配置
 
-![](./img/set_password.avif)
+![](./img/set_password.webp)
 
 用户密码
 一般不用①②，明文不安全，用第三种
@@ -1157,7 +1157,7 @@ show ip orute static          //查看静态路由
 
 实验流程
 
-![](./img/static_route_table.avif)
+![](./img/static_route_table.webp)
 ~~~
 1. 为路由器配置IP地址(物理接口和接口)
 
@@ -1233,11 +1233,11 @@ undebug all      //关闭所有调试
 
 (1)当路由器/主机的路由条目指向*出接口*时，则触发了代理ARP
 
-![](./img/proxy-arp-interface.avif)
+![](./img/proxy-arp-interface.webp)
 
 (2)当路由器/主机的路由条目指向*下一跳IP地址*时，则采用正常/常规ARP
 
-![](./img/proxy-arp-ip.avif)
+![](./img/proxy-arp-ip.webp)
 
 #### 动态路由
 
@@ -1275,7 +1275,7 @@ EGP：external gateway protocol外部网关协议BGP
 当路由器访问目的地并且有多路径时，将目的P地址跟本地路由条目进行对
 比，从左到右匹配的比特位越多，则越精准，优先级越高
 
-![](./img/route-select-0.avif)
+![](./img/route-select-0.webp)
 
 ②管理距离
 定义：Adminstrator Distance，也称为优先级，越小越优先，管理距离可以用于衡量不同路由协议直接的路径优劣。

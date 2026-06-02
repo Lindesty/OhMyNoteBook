@@ -195,4 +195,57 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 ```
 
+# 安装`sudo`并将用户添加到用户组
 
+```bash
+# 将用户切换到root
+su -
+# 更新软件包并安装 sudo
+apt update && apt install sudo -y
+# 将用户添加到 sudo 组中
+usermod -aG sudo your_username
+```
+
+# 配置xterm.js web控制台
+
+1. 点击 `hardware` 
+
+2. 添加串口设备 `add`->`Serial Port`->`0`
+
+3. 在Debian控制台中开启串口控制台输出
+
+```bash
+vim /etc/default/grub
+```
+
+修改下面的配置
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet console=tty0 console=ttyS0,115200"
+GRUB_TERMINAL="serial console"
+GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1"
+```
+
+4. 更新`grub`配置
+
+```bash
+sudo update-grub
+```
+
+5. 在Debian中启用`ttyS0`登录(serial-getty)
+
+```bash
+sudo systemctl enable serial-getty@ttyS0.service
+sudo systemctl restart serial-getty@ttyS0.service
+```
+
+6. 重启
+
+```bash
+reboot
+```
+
+7. 确认服务状态
+
+```bash
+systemctl status serial-getty@ttyS0.service
+```

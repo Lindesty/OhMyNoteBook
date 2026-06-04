@@ -76,6 +76,22 @@ glab config set -g git_protocol ssh
 
 ---
 
+### 1.5 修改配置文件来登录 
+
+在windows端，glab的配置文件位于`~\AppData\Local\glab-cli\config.yml`
+
+修改下面的重要配置：
+
+```yml
+# Default GitLab hostname to use.
+host: gitlab.lindesty.com:54430
+# Configuration specific for GitLab instances.
+hosts:
+    gitlab.lindesty.com:54430: {token: [your_access_token], api_protocol: https}
+```
+
+
+
 ## 2. 项目 (Repo) 管理
 
 ### 2.1 列出项目

@@ -1,7 +1,7 @@
 # glab CLI 使用指南 —— 自建 GitLab 实战
 
 > 自建 GitLab 实例: `https://gitlab.lindesty.com:54430` (HTTPS) / `ssh://gitlab.lindesty.com:50220` (SSH)
-> 登录用户: **lindesty** (ID: 2) · 邮箱: w18357552657@gmail.com
+
 
 ---
 

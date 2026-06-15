@@ -80,6 +80,8 @@ glab config set -g git_protocol ssh
 
 在windows端，glab的配置文件位于`~\AppData\Local\glab-cli\config.yml`
 
+在linux端，glab的配置文件位于`~/.config/glab-cli/config.yml`
+
 修改下面的重要配置：
 
 ```yml

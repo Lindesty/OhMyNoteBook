@@ -7,6 +7,11 @@
 
 ## 本地管理 
 
+初始化项目
+```bash
+git init --initial-branch=master
+```
+
 取消最近N个commit，其中N为要取消的commit数量
 
 ```bash
